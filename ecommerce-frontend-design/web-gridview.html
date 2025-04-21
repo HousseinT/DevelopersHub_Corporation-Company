@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./web-gridview-style.css" />
+    <title>E-commerce</title>
+    <link
+      rel="icon"
+      href="./Assets/Brand/logo-symbol.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <img src="./Assets/Brand/logo-colored.svg" id="brandImage" />
+      <div id="searchbarNBtn">
+        <input type="text" placeholder="Search" required />
+        <button id="menuBtn" type="button">All category &ensp;⌵</button>
+        <div id="dropdown-content">
+          <a href="#">Food</a>
+          <a href="#">Sport</a>
+          <a href="#">Tech</a>
+        </div>
+        <button id="searchBtn" type="submit">Search</button>
+      </div>
+      <div id="options">
+        <div>
+          <img src="./Assets/Image/navigation bar icons/profile.svg" />
+          <p id="nav-item-alt">Profile</p>
+        </div>
+        <div class="message">
+          <img src="./Assets/Image/navigation bar icons/message.svg" />
+          <p id="nav-item-alt">Message</p>
+        </div>
+        <div>
+          <img src="./Assets/Image/navigation bar icons/heart.svg" />
+          <p id="nav-item-alt">Orders</p>
+        </div>
+        <div>
+          <img src="./Assets/Image/navigation bar icons/cart.svg" />
+          <p id="nav-item-alt">My Cart</p>
+        </div>
+      </div>
+    </nav>
+    <section id="menu-bar">
+      <nav id="options">
+        <div class="dropdown">
+          <a href="#" class="nav-item">☰ All category</a>
+          <div class="dropdown-content">
+            <a href="#">Electronics</a>
+            <a href="#">Clothing</a>
+            <a href="#">Home & Garden</a>
+          </div>
+        </div>
+        <a href="#" class="nav-item">Hot Offers</a>
+        <a href="#" class="nav-item">Gift boxes</a>
+        <a href="#" class="nav-item">Projects</a>
+        <a href="#" class="nav-item">Menu item</a>
+        <div class="dropdown">
+          <a href="#" class="nav-item">Help &ensp;⌵</a>
+          <div class="dropdown-content">
+            <a href="#">Customer Service</a>
+            <a href="#">FAQs</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div id="shipNlanguage">
+        <div class="dropdown">
+          <a href="#" class="nav-item">English, USD&ensp;⌵</a>
+          <div class="dropdown-content">
+            <a href="#">EUR - Euro</a>
+            <a href="#">GBP - Pound</a>
+            <a href="#">JPY - Yen</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="nav-item">
+            <span>Ship to</span>
+            &ensp; <img src="./Assets/Image/flags/Property 1=DE.svg" /> &ensp;⌵
+          </a>
+          <div class="dropdown-content">
+            <a href="#">United States</a>
+            <a href="#">United Kingdom</a>
+            <a href="#">France</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <p id="navigation-text">
+        Home &ensp;>&ensp; Clothings &ensp; >&ensp;Men's wear &ensp;>&ensp;
+        Summer clothing
+      </p>
+      <section id="content-area">
+        <section id="filters">
+          <div id="Category" class="parent filter-section">
+            <div class="filter-header">
+              <h3>Category</h3>
+              <span class="filter-arrow">⌵</span>
+            </div>
+            <ul class="filter-content">
+              <li>Mobile accessory</li>
+              <li>Electronics</li>
+              <li>Smartphones</li>
+              <li>Modern Tech</li>
+              <li><a href="#">See all</a></li>
+            </ul>
+          </div>
+          <div id="Brands" class="parent filter-section">
+            <div class="filter-header">
+              <h3>Brands</h3>
+              <span class="filter-arrow">⌵</span>
+            </div>
+            <ul class="filter-content">
+              <li><input type="checkbox" class="checkbox"  checked/> Samsung</li>
+              <li><input type="checkbox" class="checkbox" checked/> Apple</li>
+              <li><input type="checkbox" class="checkbox" /> Huawei</li>
+              <li><input type="checkbox" class="checkbox" checked/> Poco</li>
+              <li><input type="checkbox" class="checkbox" /> Lenovo</li>
+              <li><a href="#">See all</a></li>
+            </ul>
+          </div>
+          <div id="Features" class="parent filter-section">
+            <div class="filter-header">
+              <h3>Features</h3>
+              <span class="filter-arrow">⌵</span>
+            </div>
+            <ul class="filter-content">
+              <li><input type="checkbox" class="checkbox" checked/> Metallic</li>
+              <li><input type="checkbox" class="checkbox" /> Plastic cover</li>
+              <li><input type="checkbox" class="checkbox" /> 8GB Ram</li>
+              <li><input type="checkbox" class="checkbox" /> Super power</li>
+              <li><input type="checkbox" class="checkbox" /> Large Memory</li>
+              <li><a href="#">See all</a></li>
+            </ul>
+          </div>
+          <div id="Range" class="parent filter-section">
+            <div class="filter-header">
+              <h3>Price range</h3>
+              <span class="filter-arrow">⌵</span>
+            </div>
+            <div class="filter-content range_container">
+              <div class="sliders_control">
+                <input
+                  id="fromSlider"
+                  type="range"
+                  value="10"
+                  min="0"
+                  max="100"
+                />
+                <input
+                  id="toSlider"
+                  type="range"
+                  value="40"
+                  min="0"
+                  max="100"
+                />
+              </div>
+            <div id="minNmax">
+              <div id="min">
+                <p>Min</p>
+                <input type="text" placeholder="0"/>
+              </div>
+              <div id="max">
+                <p>Max</p>
+                <input type="text" placeholder="999999"/>
+              </div>
+            </div>
+            <p id="applyBtn">Apply</p>
+            <!-- <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span> -->
+            </div>
+          </div>
+          <div id="condition" class="parent filter-section">
+            <div class="filter-header">
+              <h3>Conditions</h3>
+              <span class="filter-arrow">⌵</span>
+            </div>
+            <ul class="filter-content">
+              <li><input type="radio" class="checkbox" checked /> Any</li>
+              <li><input type="radio" class="checkbox" /> Refurbished</li>
+              <li><input type="radio" class="checkbox" /> Brand new</li>
+              <li><input type="radio" class="checkbox" /> Old items</li>
+              <li><a href="#" class="seeall">See all</a></li>
+            </ul>
+          </div>
+          <div id="Rating" class="parent filter-section">
+            <div class="filter-header">
+              <h3>Rating</h3>
+              <span class="filter-arrow">⌵</span>
+            </div>
+            <div class="filter-content">
+              <!-- Rating content will go here -->
+            </div>
+          </div>
+          <div id="Manufacturer" class="parent filter-section">
+            <div class="filter-header">
+              <h3>Manufacturer</h3>
+              <span class="filter-arrow">⌵</span>
+            </div>
+            <div class="filter-content">
+              <!-- Manufacturer content will go here -->
+            </div>
+          </div>
+        </section>
+        <section id="product-list">
+          <section id="item-count">
+            <p>12,911 items in <b>Mobile accessory</b></p>
+            <div>
+              <input type="checkbox" class="check"  />
+              <p>Verified only</p>
+              <p class="special featured">Featured&ensp;&ensp;&ensp;&ensp;&ensp;⌵</p>
+              <p class="special" id="gridViewBtn"><b>⊞</b></p>
+              <p class="special joined" id="listViewBtn"><b>☰</b></p>
+            </div>
+          </section>
+          <section id="list">
+            <div class="product" data-set="1">
+                <img src="./Assets/Image/tech/1.jpg" class="pImage"/>
+                <div class="descriptNmark">
+                    <div>
+                        <h2>$99.50 <span class="discount">$1128.00</span></h2>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <p class="checked">7.5</p>
+                        </div>
+                        <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                    </div>
+                    <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+                </div>
+            </div>
+            <div class="product" data-set="2">
+              <img src="./Assets/Image/tech/4.jpg" class="pImage"/>
+              <div class="descriptNmark">
+                  <div>
+                      <h2>$99.50 <span class="discount">$1128.00</span></h2>
+                      <div class="rating">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star "></span>
+                          <p class="checked">7.5</p>
+                      </div>
+                      <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                  </div>
+                  <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+              </div>
+            </div>
+            <div class="product" data-set="3">
+                <img src="./Assets/Image/tech/3.jpg" class="pImage"/>
+                <div class="descriptNmark">
+                    <div>
+                        <h2>$99.50 </h2>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <p class="checked">7.5</p>
+                        </div>
+                        <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                    </div>
+                    <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+                </div>
+            </div> 
+            <div class="product" data-set="4">
+              <img src="./Assets/Image/tech/2.jpg" class="pImage"/>
+              <div class="descriptNmark">
+                  <div>
+                      <h2>$99.50 <span class="discount">$1128.00</span></h2>
+                      <div class="rating">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star "></span>
+                          <p class="checked">7.5</p>
+                      </div>
+                      <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                  </div>
+                  <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+              </div>
+            </div>
+            
+            <div class="product" data-set="5">
+                <img src="./Assets/Image/tech/6.jpg" class="pImage"/>
+                <div class="descriptNmark">
+                    <div>
+                        <h2>$99.50 <span class="discount">$1128.00</span></h2>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <p class="checked">7.5</p>
+                        </div>
+                        <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                    </div>
+                    <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+                </div>
+                </div>
+                <div class="product" data-set="6">
+                  <img src="./Assets/Image/tech/5.jpg" class="pImage"/>
+                  <div class="descriptNmark">
+                      <div>
+                          <h2>$99.50 </h2>
+                          <div class="rating">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star "></span>
+                              <p class="checked">7.5</p>
+                          </div>
+                          <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                      </div>
+                      <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+                  </div>
+            </div>
+            <div class="product" data-set="7">
+                <img src="./Assets/Image/tech/7.jpg" class="pImage"/>
+                <div class="descriptNmark">
+                    <div>
+                        <h2>$99.50 <span class="discount">$1128.00</span></h2>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <p class="checked">7.5</p>
+                        </div>
+                        <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                    </div>
+                    <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+                </div>
+            </div>
+            <div class="product" data-set="8">
+                <img src="./Assets/Image/tech/8.jpg" class="pImage"/>
+                <div class="descriptNmark">
+                    <div>
+                        <h2>$99.50 <span class="discount">$1128.00</span></h2>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <p class="checked">7.5</p>
+                        </div>
+                        <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                    </div>
+                    <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+                </div>
+            </div>
+            <div class="product" data-set="9">
+                <img src="./Assets/Image/tech/9.jpg" class="pImage"/>
+                <div class="descriptNmark">
+                    <div>
+                        <h2>$99.50 </h2>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <p class="checked">7.5</p>
+                        </div>
+                        <p class="title">GoPro HERO 4K Action <br> Camera - black</p>
+                    </div>
+                    <img src="./Assets/Image/blueHeart-removebg-preview.png" class="heart"/>
+                </div>
+            </div>
+            
+            </div>
+          </section>
+        </section>
+      </section>
+      <section id="page-count">
+
+        <button id="dropdownBtn">Show 10&ensp;&ensp;&ensp;⌵</button>
+        <div>
+            <button><</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button><b>></b></button>
+        </div>
+    </section>
+    </main>
+    <footer>
+      <section id="subscription">
+        <h2>Subscribe on our newsletter</h2>
+        <p>
+          Get daily news on upcoming offers from many suppliers all over the
+          world
+        </p>
+        <div>
+          <input type="text" placeholder="✉︎ Email" />
+          <p>Subscribe</p>
+        </div>
+      </section>
+
+      <section id="abouts">
+        <div id="socials">
+          <img src="./Assets/Brand/logo-colored.svg" />
+          <p>
+            Best information about the company <br />gies here but now lorem
+            ipsum is
+          </p>
+          <div id="logos">
+            <img
+              src="./Assets/Image/socials icons/Facebook_LOGO-removebg-preview.png"
+            />
+            <img
+              src="Assets/Image/socials icons/instagram-removebg-preview1.png"
+            />
+            <img
+              src="./Assets/Image/socials icons/linkedIn-removebg-preview.png"
+            />
+            <img
+              src="./Assets/Image/socials icons/twitter-removebg-preview.png"
+            />
+            <img
+              src="./Assets/Image/socials icons/ypuyube-removebg-preview.png"
+            />
+          </div>
+        </div>
+        <div class="info">
+          <h3>About</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categorys</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Partnership</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categorys</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Information</h3>
+          <ul>
+            <li>Help Center</li>
+            <li>Money REfund</li>
+            <li>Shipping</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>For users</h3>
+          <ul>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Setting</li>
+            <li>My Orders</li>
+          </ul>
+        </div>
+        <div class="info">
+          <h3>Get app</h3>
+          <img src="./Assets/Image/appstorelogo-removebg-preview.png" />
+          <img src="./Assets/Image/googlestore-removebg-preview.png" />
+        </div>
+      </section>
+      <section id="copyright">
+        <p>© 2025 Ecommerce</p>
+        <p>
+          <img src="./Assets/Image/flags/Property 1=US.svg" /> English&ensp;^
+        </p>
+      </section>
+    </footer>
+    <script>
+      const brandImg = document.querySelector("#brandImage");
+
+      const inputBar = document.querySelector("#nav-bar #searchbarNBtn input");
+      const searchBtn = document.querySelector("#searchBtn");
+      const products = document.querySelectorAll(".product");
+      const hearts = document.querySelectorAll(".heart");
+      const gridViewBtn = document.querySelector("#gridViewBtn");
+      const listViewBtn = document.querySelector("#listViewBtn");
+
+      brandImg.addEventListener("click", function(e){
+  window.location.href = "./index.html";
+})
+searchBtn.addEventListener("click", function (e) {
+  if (inputBar.value != "") {
+    inputBar.value = "Search";
+  }
+});
+
+products.forEach((product) => {
+  product.addEventListener("click", function (e) {
+    html = product;
+    console.log(html);
+    let childImg = html.getElementsByTagName("img");
+    let name = html.getElementsByTagName("p");
+    const obj = {
+      nameProd: name[1].textContent,
+      imgProd: childImg[0].src,
+    };
+    localStorage.setItem("selectedProd", JSON.stringify(obj));
+    window.location.href = "./web-detail.html";
+  });
+});
+hearts.forEach((heart) => {
+  heart.addEventListener("click", function (e) {
+    event.stopPropagation(); 
+    if(!heart.classList.contains("bookMarked")){
+      heart.src = "./Assets/Image/12144-blue-heart-icon.png";
+      heart.classList.add("bookMarked");
+    }
+    else{
+      heart.src = "./Assets/Image/blueHeart-removebg-preview.png";
+      heart.classList.remove("bookMarked");
+    }
+  });
+});
+
+// View switching functionality
+listViewBtn.addEventListener("click", function() {
+  window.location.href = "./web-listview.html";
+});
+
+// Grid view button doesn't need an event listener on the grid view page
+// as we're already on the grid view
+
+// Filter section toggle functionality
+const filterHeaders = document.querySelectorAll('.filter-header');
+
+filterHeaders.forEach(header => {
+  header.addEventListener('click', function() {
+    // Get the content element that follows this header
+    const content = this.nextElementSibling;
+    const arrow = this.querySelector('.filter-arrow');
+    
+    // Toggle the collapsed class on the content
+    content.classList.toggle('collapsed');
+    
+    // Toggle the rotated class on the arrow
+    arrow.classList.toggle('rotated');
+  });
+});
+
+// Initialize all filter sections as expanded by default
+document.addEventListener('DOMContentLoaded', function() {
+  // You can uncomment the following line to have all sections collapsed by default
+  // document.querySelectorAll('.filter-content').forEach(content => content.classList.add('collapsed'));
+})
+
+    </script>
+    
+  </body>
+</html>

@@ -48,6 +48,10 @@ A modern, responsive e-commerce frontend design implementation created during my
 - Multiple product category layouts
 - Brand identity implementation
 
+## 🖼️ Project Screenshot
+
+![E-commerce Frontend Screenshot](Web%20Design/web-main.jpg)
+
 ## 🌐 Cross-Platform Support
 
 - Mobile responsive design

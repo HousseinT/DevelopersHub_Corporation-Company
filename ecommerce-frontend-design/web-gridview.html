@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css" />
@@ -12,84 +13,12 @@
       href="./Assets/Brand/logo-symbol.svg"
       type="image/x-icon"
     />
+    <script src="./navbar.js"></script>
+    <script src="./menubar.js"></script>
   </head>
   <body>
-    <nav id="nav-bar">
-      <img src="./Assets/Brand/logo-colored.svg" id="brandImage" />
-      <div id="searchbarNBtn">
-        <input type="text" placeholder="Search" required />
-        <button id="menuBtn" type="button">All category &ensp;⌵</button>
-        <div id="dropdown-content">
-          <a href="#">Food</a>
-          <a href="#">Sport</a>
-          <a href="#">Tech</a>
-        </div>
-        <button id="searchBtn" type="submit">Search</button>
-      </div>
-      <div id="options">
-        <div>
-          <img src="./Assets/Image/navigation bar icons/profile.svg" />
-          <p id="nav-item-alt">Profile</p>
-        </div>
-        <div class="message">
-          <img src="./Assets/Image/navigation bar icons/message.svg" />
-          <p id="nav-item-alt">Message</p>
-        </div>
-        <div>
-          <img src="./Assets/Image/navigation bar icons/heart.svg" />
-          <p id="nav-item-alt">Orders</p>
-        </div>
-        <div>
-          <img src="./Assets/Image/navigation bar icons/cart.svg" />
-          <p id="nav-item-alt">My Cart</p>
-        </div>
-      </div>
-    </nav>
-    <section id="menu-bar">
-      <nav id="options">
-        <div class="dropdown">
-          <a href="#" class="nav-item">☰ All category</a>
-          <div class="dropdown-content">
-            <a href="#">Electronics</a>
-            <a href="#">Clothing</a>
-            <a href="#">Home & Garden</a>
-          </div>
-        </div>
-        <a href="#" class="nav-item">Hot Offers</a>
-        <a href="#" class="nav-item">Gift boxes</a>
-        <a href="#" class="nav-item">Projects</a>
-        <a href="#" class="nav-item">Menu item</a>
-        <div class="dropdown">
-          <a href="#" class="nav-item">Help &ensp;⌵</a>
-          <div class="dropdown-content">
-            <a href="#">Customer Service</a>
-            <a href="#">FAQs</a>
-            <a href="#">Contact Us</a>
-          </div>
-        </div>
-      </nav>
-      <div id="shipNlanguage">
-        <div class="dropdown">
-          <a href="#" class="nav-item">English, USD&ensp;⌵</a>
-          <div class="dropdown-content">
-            <a href="#">EUR - Euro</a>
-            <a href="#">GBP - Pound</a>
-            <a href="#">JPY - Yen</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="#" class="nav-item">
-            <span>Ship to</span>
-            &ensp; <img src="./Assets/Image/flags/Property 1=DE.svg" /> &ensp;⌵
-          </a>
-          <div class="dropdown-content">
-            <a href="#">United States</a>
-            <a href="#">United Kingdom</a>
-            <a href="#">France</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="navbar-container"></div>
+    <div id="menubar-container"></div>
     <main>
       <p id="navigation-text">
         Home &ensp;>&ensp; Clothings &ensp; >&ensp;Men's wear &ensp;>&ensp;
@@ -565,6 +494,10 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
     </script>
-    
+    <script>
+      // Load reusable components
+      loadNavbar();
+      loadMenubar();
+    </script>
   </body>
 </html>

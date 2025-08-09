@@ -92,6 +92,16 @@ font-weight: 400;
   padding-bottom: 0.25%;
   padding-top: 0.25%;
 }
+
+@media (max-width: 767px) {
+  #nav-bar #searchbarNBtn #dropdown-content {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    left: auto;
+    right: auto;
+  }
+}
 #nav-bar #searchbarNBtn #dropdown-content a {
   margin-left: 4%;
   width: 80%;
@@ -1113,4 +1123,290 @@ main {
 }
 #automobiles{
   background-color: rgb(229, 241, 254);
+}
+
+/* ===== RESPONSIVE DESIGN - MEDIA QUERIES ===== */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+/* Medium Desktop/Laptop (992px to 1199px) */
+@media (max-width: 1199px) {
+  #nav-bar {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  #searchbarNBtn {
+    width: 35rem;
+  }
+  
+  #menu-bar {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  #nav-bar {
+    flex-direction: row;
+    padding: 1rem;
+    gap: 1rem;
+    height: auto;
+  }
+  
+  #searchbarNBtn {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  #nav-bar #options {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    margin-right: 0;
+  }
+  
+  #nav-bar #options div {
+    font-size: 0.8rem;
+  }
+  
+  #brandImage {
+    width: 140px;
+  }
+}
+  
+  #menu-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  #menu-bar #options {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  #menu-bar #shipNlanguage {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Product sections */
+  #products {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .product-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product-card {
+    width: calc(50% - 1rem);
+    min-width: 200px;
+  }
+
+
+/* Mobile Large (576px to 767px) */
+@media (max-width: 767px) {
+  #nav-bar {
+    flex-direction: column;
+    padding: 0.5rem;
+    height: auto;
+    gap: 1rem;
+  }
+  
+  #brandImage {
+    width: 120px;
+    height: auto;
+    align-self: center;
+  }
+  
+  #searchbarNBtn {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: none;
+  }
+  
+  #nav-bar #searchbarNBtn input {
+    width: 100%;
+    border-radius: 4px;
+    max-width: none;
+  }
+  
+  #nav-bar #searchbarNBtn #menuBtn {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  #nav-bar #searchbarNBtn #searchBtn {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  #nav-bar #options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  #nav-bar #options div {
+    font-size: 0.7rem;
+  }
+  
+  #nav-bar #options div img {
+    width: 1.5rem;
+    height: 1rem;
+  }
+  
+  #menu-bar #options .nav-item {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+  
+  #menu-bar #shipNlanguage .nav-item {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+  
+  /* Product cards */
+  .product-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer adjustments */
+  #subscription {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  #abouts {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  #abouts .info {
+    width: 100%;
+  }
+  
+  #copyright {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* Mobile Small (up to 575px) */
+@media (max-width: 575px) {
+  body {
+    font-size: 14px;
+  }
+  
+  #nav-bar {
+    flex-direction: column;
+    padding: 0.25rem;
+    height: auto;
+    gap: 0.75rem;
+  }
+  
+  #brandImage {
+    width: 100px;
+    align-self: center;
+  }
+  
+  #searchbarNBtn {
+    width: 100%;
+    max-width: none;
+  }
+  
+  #nav-bar #options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin-right: 0;
+    gap: 0.25rem;
+  }
+  
+  #nav-bar #options div {
+    font-size: 0.6rem;
+  }
+  
+  #nav-bar #options div img {
+    width: 1.2rem;
+    height: 0.8rem;
+  }
+  
+  #nav-bar #options div p {
+    display: none; /* Hide text on very small screens */
+  }
+  
+  #menu-bar #options {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  #menu-bar #options .nav-item {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+  
+  /* Hide some elements on very small screens */
+  #menu-bar #shipNlanguage {
+    display: none;
+  }
+}
+
+/* Utility classes for responsive design */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0 0.5rem;
+}
+
+.hidden-mobile {
+  display: block;
+}
+
+.hidden-desktop {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none;
+  }
+  
+  .hidden-desktop {
+    display: block;
+  }
 }

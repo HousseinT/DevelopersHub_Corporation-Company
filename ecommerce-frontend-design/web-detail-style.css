@@ -38,6 +38,126 @@
   margin-bottom: 2%;
   margin-top: 2%;
 }
+
+/* ===== RESPONSIVE DESIGN FOR PRODUCT DETAIL PAGE ===== */
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+  #content-area {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  #content-area #content-area-first-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  #content-area #content-area-first-section div {
+    width: 100%;
+  }
+  
+  #content-area #content-area-first-section #product-img {
+    order: -1;
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  #content-area #content-area-first-section #product-img img {
+    width: 60%;
+    left: 0;
+    position: static;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  #content-area {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  #content-area #content-area-first-section {
+    padding: 1rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout h2 {
+    font-size: 1.2rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout .stock,
+  #content-area #content-area-first-section #productAbout span,
+  #content-area #content-area-first-section #productAbout .price {
+    font-size: 1rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout #ratingNetc p {
+    font-size: 0.9rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout #piecesContainer {
+    font-size: 0.9rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout #piecesContainer div {
+    padding-left: 2%;
+    width: 100%;
+  }
+  
+  #content-area #content-area-first-section #productAbout #piecesContainer .centerDiv {
+    border: 0.1px solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+    border-right: none;
+  }
+  
+  #content-area #content-area-first-section #product-img img {
+    width: 80%;
+  }
+}
+
+/* Mobile Small (up to 575px) */
+@media (max-width: 575px) {
+  #content-area {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  
+  #content-area #content-area-first-section {
+    padding: 0.5rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout h2 {
+    font-size: 1.1rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout .stock,
+  #content-area #content-area-first-section #productAbout span,
+  #content-area #content-area-first-section #productAbout .price {
+    font-size: 0.9rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout #ratingNetc {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  #content-area #content-area-first-section #productAbout #ratingNetc p {
+    font-size: 0.8rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  #content-area #content-area-first-section #productAbout #piecesContainer {
+    font-size: 0.8rem;
+  }
+  
+  #content-area #content-area-first-section #product-img img {
+    width: 90%;
+  }
+}
+
 #content-area #content-area-first-section div {
   width: 33%;
   height: fit-content;
